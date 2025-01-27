@@ -13,11 +13,13 @@ def game_core_v3(number: int = 1) -> int:
     predict = np.random.randint(1, 101)
     while number != predict:
         count += 1
+        # определяем десятки
         if number > predict + 10:
             predict += 10
         elif number < predict - 10:
             predict -= 10
         else:
+            # определяем единицы
             if number > predict:
                 predict += 1
             else:
